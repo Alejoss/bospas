@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['BOSPAS_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -74,7 +74,7 @@ DATABASES = {
 
 TEMPLATE_DIRS = (BASE_DIR + "/templates/",)
 
-LOCAL_STATICFILES = True
+LOCAL_STATICFILES = False
 
 if not LOCAL_STATICFILES:
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'

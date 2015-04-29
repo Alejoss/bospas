@@ -74,7 +74,7 @@ DATABASES = {
 
 TEMPLATE_DIRS = (BASE_DIR + "/templates/",)
 
-LOCAL_STATICFILES = False
+LOCAL_STATICFILES = True
 
 if not LOCAL_STATICFILES:
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'

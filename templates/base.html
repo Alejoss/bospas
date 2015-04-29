@@ -82,7 +82,7 @@
 
 						<!-- Logo -->
 						<a class="logo" href="index.html">
-							<img src="{% static 'assets/images/logo.png' %}" height="50" alt="" />
+							<img src="" height="50" alt="" />
 						</a>
 
 						<!-- Mobile Menu Button -->
@@ -108,8 +108,8 @@
 								<li><a href="{% url 'inicio:home' %}">Home<span></span></a></li>
 								<li><a href="{% url 'inicio:about' %}">About Us<span></span></a></li>
 								<li><a href="{% url 'inicio:gallery' %}">Gallery<span></span></a></li>
-								<li><a href="#investigacion">Information<span></span></a></li>
-								<li><a href="#nosotros">Contact<span></span></a></li>
+								<li><a href="{% url 'inicio:info' %}">Information<span></span></a></li>
+								<li><a href="{% url 'inicio:contact' %}">Contact<span></span></a></li>
 							</ul>
 
 							</nav>

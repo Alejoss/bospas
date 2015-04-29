@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<!-- CONTENT -->
+<section>
+	<div class="container">
+		<div class="row">
+			<!-- FORM -->
+			<div class="col-md-9">
+
+				<div id="gmap" class="grayscale gmap-half margin-bottom60"><!-- google map --></div>
+				<script type="text/javascript">
+					var	$googlemap_latitude 	= -37.812344,
+						$googlemap_longitude	= 144.968900,
+						$googlemap_zoom			= 13;
+				</script>
+
+				<h3>(Podemos incluir una imagen con las direcciones además de Google maps) <br> Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+				<form id="contactForm" action="php/contact.php" method="post">
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-6">
+								<label>Full Name *</label>
+								<input required type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="contact_name" id="contact_name">
+							</div>
+							<div class="col-md-6">
+								<label>E-mail Address *</label>
+								<input required type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="contact_email" id="contact_email">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-12">
+								<label>Subject</label>
+								<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="contact_subject" id="contact_subject">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-12">
+								<label>Message *</label>
+								<textarea required maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="contact_comment" id="contact_comment"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<br />
+
+					<div class="row">
+						<div class="col-md-12">
+							<input class="hidden" type="text" name="captcha" id="captcha" value="" /><!-- keep it hidden -->
+							<input type="submit" value="Send Message" class="btn btn-primary btn-lg" id="contact_submit" />
+						</div>
+					</div>
+				</form>
+			
+			</div>
+			<!-- /FORM -->
+
+
+			<!-- INFO -->
+			<div class="col-md-3">
+
+				<h2>Visit Us</h2>
+
+				<p>
+					Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.
+				</p>
+
+				<div class="divider half-margins"><!-- divider --></div>
+
+				<p class="nomargin-bottom">
+					<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City, Country</span>
+					<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
+					<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+				</p>
+
+				<div class="divider half-margins"><!-- divider --></div>
+
+			</div>
+			<!-- /INFO -->
+		</div>
+	</div>
+</section>
+<!-- /CONTENT -->
+
+{% endblock content %}

@@ -15,3 +15,6 @@ class ViewGalery(TemplateView):
 
 class ViewInfo(TemplateView):
 	template_name = "inicio/info.html"
+
+class ViewContact(TemplateView):
+	template_name = "inicio/contact.html"
